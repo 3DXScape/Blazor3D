@@ -112,11 +112,12 @@
         var settings = new ImportSettings
             {
                 Format = Import3DFormats.Obj,
-                FileURL = "https://threejs.org/examples/models/obj/male02/male02.obj",
+                //FileURL = "https://threejs.org/examples/models/obj/male02/male02.obj",
+                FileURL = "http://localhost/scene_mesh_textured.obj",
             };
         // Also you can get the uuid of object to be imported before its loaded completely
         loadedObjectGuid = await View3D1.Import3DModelAsync(settings);
-        await View3D1.SetCameraPositionAsync(new Vector3(0, 100, 250), new Vector3(0, 50, 0));
+        await View3D1.SetCameraPositionAsync(new Vector3(100, 100, 100), new Vector3(200, 200, 200));
     }
 
     private async Task OnLoadColladaButtonClick()
@@ -148,6 +149,7 @@
             {
                 Format = Import3DFormats.Gltf,
                 FileURL = "https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf",
+                //FileURL = "http://localhost/test.gltf",
             };
         loadedObjectGuid = await View3D1.Import3DModelAsync(settings);
         await View3D1.SetCameraPositionAsync(new Vector3(0, 1, 5), new Vector3(0, 0.5f, 0));

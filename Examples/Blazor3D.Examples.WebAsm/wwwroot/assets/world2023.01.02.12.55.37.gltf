@@ -1,0 +1,255 @@
+{
+  "asset": {
+    "copyright": "",
+    "generator": "GSR00.0.5.4",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "OGC_Semantic_Core",
+    "KHR_materials_transmission"
+  ],
+  "extensionsRequired": [
+    "OGC_Semantic_Core"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ],
+      "extensions": {
+        "OGC_Semantic_Core": {
+          "extensionName": "OGC_City_Semantic_Core",
+          "extensionVersion": "0.5.3",
+          "geoPose": {
+            "Position": {
+              "lat": 51.955005,
+              "lon": -8.403096,
+              "h": -114
+            },
+            "Angles": {
+              "yaw": 0,
+              "pitch": -90,
+              "roll": 0
+            },
+            "Name": "root"
+          },
+          "radius": 200,
+          "name": "Test",
+          "uri": "https://citygml.info/OGC-Khronos-Forum/Prototype/Proto.gltf",
+          "minUnixTime": 1672664137449,
+          "maxUnixTime": 1672664137449
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Bounding Sphere",
+      "mesh": 0
+    },
+    {
+      "name": "Terrain",
+      "mesh": 1
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.4,
+          0.4,
+          0.4,
+          0.45
+        ],
+        "metallicFactor": 0.10000000149011612,
+        "roughnessFactor": 0.10000000149011612
+      },
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "generic"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.4,
+          0.4,
+          0,
+          1
+        ],
+        "metallicFactor": 0.10000000149011612,
+        "roughnessFactor": 0.10000000149011612
+      },
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "name": "generic"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "material": 0,
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2
+        }
+      ],
+      "name": ""
+    },
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "material": 1,
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2
+        }
+      ],
+      "name": ""
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "normalized": false,
+      "count": 296,
+      "type": "VEC3",
+      "max": [
+        197.96269019967525,
+        197.96269019967525,
+        197.96269019967525
+      ],
+      "min": [
+        -197.96269019967525,
+        -197.96269019967525,
+        -197.96269019967525
+      ],
+      "name": "vertices"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "normalized": false,
+      "count": 296,
+      "type": "VEC3",
+      "name": "normals"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "normalized": false,
+      "count": 1764,
+      "type": "SCALAR",
+      "name": "indices"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "normalized": false,
+      "count": 296,
+      "type": "VEC3",
+      "max": [
+        197.96269019967525,
+        197.96269019967525,
+        197.96269019967525
+      ],
+      "min": [
+        -197.96269019967525,
+        -197.96269019967525,
+        -197.96269019967525
+      ],
+      "name": "vertices"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "normalized": false,
+      "count": 296,
+      "type": "VEC3",
+      "name": "normals"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "normalized": false,
+      "count": 1764,
+      "type": "SCALAR",
+      "name": "indices"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 3552,
+      "target": 34962,
+      "name": "vertices"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3552,
+      "byteLength": 3552,
+      "target": 34962,
+      "name": "normals"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7104,
+      "byteLength": 3528,
+      "target": 34963,
+      "name": "indices"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 3552,
+      "target": 34962,
+      "name": "vertices"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3552,
+      "byteLength": 3552,
+      "target": 34962,
+      "name": "normals"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7104,
+      "byteLength": 3528,
+      "target": 34963,
+      "name": "indices"
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "world2023.01.02.12.55.37",
+      "byteLength": 21264,
+      "name": "Background. buffer"
+    },
+    {
+      "uri": "world2023.01.02.12.55.37",
+      "byteLength": 0,
+      "name": "Foreground. buffer"
+    },
+    {
+      "uri": "world2023.01.02.12.55.37",
+      "byteLength": 0,
+      "name": "EarthCenteredInertial. buffer"
+    },
+    {
+      "uri": "world2023.01.02.12.55.37",
+      "byteLength": 0,
+      "name": "Virtual. buffer"
+    }
+  ]
+}

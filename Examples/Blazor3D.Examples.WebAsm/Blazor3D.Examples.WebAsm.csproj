@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\assets\blazor3d.glb">
+    <Content Update="wwwroot\assets\world2023.01.02.12.55.37.gltf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -148,13 +148,13 @@
         var settings = new ImportSettings
             {
                 Format = Import3DFormats.Gltf,
-                FileURL = "https://hillyfieldsbubble.org/Data/models/world2022.12.31.11.34.14.gltf",
+                FileURL = "https://hillyfieldsbubble.org/Data/models/2024.01.29.16.52.29.gltf",
                 ///FileURL = "https://hillyfieldsbubble.org/Data/models/CesiumMilkTruck.gltf",
                 ///FileURL = "https://hillyfieldsbubble.org/Data/models/DamagedHelmet.gltf",
                 ///FileURL = "https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf",
             };
         loadedObjectGuid = await View3D1.Import3DModelAsync(settings);
-        await View3D1.SetCameraPositionAsync(new Vector3(0, 1, 5), new Vector3(0, 0.5f, 0));
+        await View3D1.SetCameraPositionAsync(new Vector3(100, 50, 100), new Vector3(0, 0.5f, 0));
         ///await View3D1.SetCameraPositionAsync(new Vector3(100,20,100), new Vector3(0, 20.0f, 0));
     }
     private async Task OnLoadStlButtonClick()
@@ -166,7 +166,7 @@
             };
         loadedObjectGuid = await View3D1.Import3DModelAsync(settings);
         //await View3D1.SetCameraPositionAsync(new Vector3(0, 3, 3), new Vector3(0, 1, 0));
-        await View3D1.SetCameraPositionAsync(new Vector3(10, 10, 10), new Vector3(0, 100, 0));
+        await View3D1.SetCameraPositionAsync(new Vector3(400, 10, 400), new Vector3(0, 20, 0));
         View3D1.UpdateScene();
         //await View3D1.SetCameraPositionAsync(new Vector3(600, 100, 600), new Vector3(0, 100, 0));
 

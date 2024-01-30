@@ -1,14 +1,14 @@
 ﻿@page "/packages"
 @using HomagGroup.Blazor3D.Geometires.Text;
 
-<h3>Example06</h3>
+<h3>Packages</h3>
 
 <div>
-    This example shows how to:
+    Pachages are collections of data that illustrate a particular action or use case.:
     <ul>
-        <li>Add text object with extruded geometry</li>
-        <li>Add text object with shaped geometry</li>
-        <li>Add text object with stroke geometry</li>
+        <li>Ride-Hailing</li>
+        <li>Underground Utility Protection</li>
+        <li>Visual Positioning</li>
     </ul>
 </div>
 
@@ -38,7 +38,7 @@
             {
                 //Color = "red",
                 Decay = 2,
-                Position = new Vector3(1, 5, 0)
+                Position = new Vector3(5, 5, 3)
             };
         scene.Add(plight);
         scene.Add(new PointLightHelper(plight, 0.5));
@@ -105,7 +105,7 @@
                     BevelThickness = 0.1,
                     Text = "Packages",
                 },
-                Position = new Vector3(0, 0 - 2.4, 1)
+                Position = new Vector3(0, 0 - 2.4, -1)
             };
         scene.Add(text);
 
@@ -126,7 +126,7 @@
                     BevelThickness = 0.1,
                     Text = "!",
                 },
-                Position = new Vector3(5, 0 - 2.4, 2 )
+                Position = new Vector3(7, 0 - 2.4, -1 )
             };
         scene.Add(text);
 

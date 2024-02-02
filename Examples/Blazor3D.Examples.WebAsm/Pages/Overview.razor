@@ -4,7 +4,9 @@
 
 <h3>Overview</h3>
 <div>
-    This is the public face of released data from the April 25-26 Hillyfields Data Capture. ETA for completion is 30 September 2023.
+    <p>
+This is the public face of released data from the April 25-26 Hillyfields Data Capture. 
+    </p>
 </div>
 
 <div class="row justify-content-center">
@@ -12,7 +14,8 @@
         <Viewer @ref="View3D1" ViewerSettings=@settings Scene=scene />
     </div>
     <div class="col-5">
-        <input type="text" @bind="selectObjectGuid"></input> <button @onclick="OnSelectObjectByUUIDClick">Select object</button>
+        <input type="text" @bind="selectObjectGuid"/>
+        <button @onclick="OnSelectObjectByUUIDClick">Select object</button>
     </div>
 </div>
 <div>@msg</div>

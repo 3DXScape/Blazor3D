@@ -19,15 +19,19 @@
 </div>
 
 @code {
-    private Viewer View3D1 = null!;
+    private static Viewer View3D1 = null!;
 
-    private Scene scene = new Scene();
-
+    private static Scene scene = null;
 
     protected override Task OnInitializedAsync()
     {
-        AddLights();
-        FillScene();
+        if (scene == null)
+        {
+            scene = new Scene();
+            scene.BackGroundColor = "white";
+            AddLights();
+            FillScene();
+        }
         return base.OnInitializedAsync();
     }
 
@@ -62,7 +66,7 @@
                     BevelThickness = 0.1,
                     Text = "Hillyfields",
                 },
-                Position = new Vector3(0, 0 - 0, -1)
+                Position = new Vector3(0-4, 0 - 0, -1)
             };
 
         scene.Add(text);
@@ -84,7 +88,7 @@
                     BevelThickness = 0.1,
                     Text = "Bubble",
                 },
-                Position = new Vector3(0, 0 - 1.2, -1)
+                Position = new Vector3(0-4, 0 - 1.2, -1)
             };
         scene.Add(text);
 
@@ -105,7 +109,7 @@
                     BevelThickness = 0.1,
                     Text = "Packages",
                 },
-                Position = new Vector3(0, 0 - 2.4, -1)
+                Position = new Vector3(0-4, 0 - 2.4, -1)
             };
         scene.Add(text);
 
@@ -113,7 +117,7 @@
             {
                 Material = new MeshStandardMaterial
                 {
-                    Color = "violet",
+                    Color = "grey",
                 },
                 Geometry = new TextExtrudeGeometry
                 {
@@ -126,10 +130,10 @@
                     BevelThickness = 0.1,
                     Text = "!",
                 },
-                Position = new Vector3(7, 0 - 2.4, -1 )
+                Position = new Vector3(7-4.5, 0 - 2.4, -1 )
             };
         scene.Add(text);
+        //((HomagGroup.Blazor3D.Viewers.Viewer)View3D1).SetCameraPositionAsync(new Vector3(5, 5, 5), new Vector3(0, 0, 0));
 
     }
-
 }

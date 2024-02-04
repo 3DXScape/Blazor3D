@@ -29,7 +29,7 @@ Explanation of what's a bubble and what is the Hillyfields Bubble.'
             Position = new Vector3(20, 20, 1),
             AnimateRotationSettings = new AnimateRotationSettings(true, 0.1, 0.05, 0.1, radius: 256)
             {
-                StopAnimationOnOrbitControlMove = false
+                StopAnimationOnOrbitControlMove = true
             },
             LookAt = new Vector3(0.5f, -50, 0)
         };
@@ -52,12 +52,12 @@ Explanation of what's a bubble and what is the Hillyfields Bubble.'
         scene.Add(new AmbientLight());
         scene.Add(new PointLight()
             {
-                Intensity = 0.1f,
-                Position = new Vector3(200, 200, 200)
+                Intensity = 3f,
+                Position = new Vector3(200, -200, 200)
             });
         scene.Add(new PointLight()
             {
-                Intensity = 2f,
+                Intensity = 0.2f,
                 Position = new Vector3(0, -200, 500),
                 Decay = 0,
 
@@ -68,9 +68,23 @@ Explanation of what's a bubble and what is the Hillyfields Bubble.'
     {
         if (firstRender)
         {
+            double radius = 256.0 * 1.08;
+            double offset = radius * Math.Sqrt(3.0) / 8.0;
             // subscribe events only once
             View3D1.ObjectLoaded += OnObjectLoaded;
             View3D1.JsModuleLoaded += OnJsModuleLoaded;
+            scene.Add(new Mesh
+                {
+                    Geometry = new SphereGeometry(radius: (float)radius, widthSegments: 128, heightSegments: 64),
+                    Position = new Vector3(0, offset, 0),
+                    Material = new MeshStandardMaterial()
+                    {
+                        Color = "blue",
+                        Transparent = true,
+                        Wireframe = true,
+                        Opacity = 0.025
+                    },
+                });
         }
 
         return base.OnAfterRenderAsync(firstRender);
@@ -150,7 +164,7 @@ Explanation of what's a bubble and what is the Hillyfields Bubble.'
         var settings = new ImportSettings
             {
                 Format = Import3DFormats.Gltf,
-                FileURL = "https://hillyfieldsbubble.org/Data/models/2024.01.29.16.52.29.gltf?" + uuid,
+                FileURL = "https://hillyfieldsbubble.org/Data/models/2024.02.03.17.45.16.gltf?" + uuid,
                 ///FileURL = "https://hillyfieldsbubble.org/Data/models/CesiumMilkTruck.gltf",
                 ///FileURL = "https://hillyfieldsbubble.org/Data/models/DamagedHelmet.gltf",
                 ///FileURL = "https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf",
